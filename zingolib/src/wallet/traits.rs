@@ -314,9 +314,7 @@ impl CompactOutput<OrchardDomain> for CompactOrchardAction {
     }
 
     fn domain(&self, _parameters: ChainType, _heightt: BlockHeight) -> OrchardDomain {
-        OrchardDomain::for_nullifier(
-            orchard::note::Nullifier::from_bytes(slice_to_array(&self.nullifier)).unwrap(),
-        )
+        OrchardDomain::for_compact_action(&self.to_compact_output_impl())
     }
 
     fn to_compact_output_impl(&self) -> Self::CompactAction {
