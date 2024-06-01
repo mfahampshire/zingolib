@@ -38,7 +38,7 @@ append-only-vec = { git = "https://github.com/zancas/append-only-vec.git", branc
 log = "0.4.14"
 http.workspace = true
 base64 = "0.13.0"
-bytes = "0.4"
+bytes = "1.6"
 rand = "0.8.5"
 serde_json = "1.0.82"
 tokio =  { version = "1.24.2", features = ["full"] }
